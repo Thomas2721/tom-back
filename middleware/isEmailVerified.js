@@ -1,8 +1,10 @@
+require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const User = require("../models/userModel");
 
 const isEmailVerified = async (request, response, next) => {
   let token;
+  
 
   if (
     request.headers.authorization &&
